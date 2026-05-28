@@ -179,7 +179,6 @@
     gap: 4rem;
     align-items: center;
     width: 100%;
-    max-width: 1300px;
   }
 
   .hero-content {
@@ -688,7 +687,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.5rem;
-    max-width: 1200px;
   }
 
   .project-card {
@@ -883,10 +881,18 @@
     #home { padding: 7rem 1.5rem 4rem; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .hero-stats { gap: 1.5rem; }
     .projects-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
     .scroll-hint { display: none; }
+    .hero-title { font-size: clamp(2.4rem, 11vw, 4rem); letter-spacing: -1px; word-break: break-word; }
+    .hero-subtitle { font-size: 0.95rem; max-width: 100%; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2rem; margin-bottom: 2rem; }
+    .stat-num { font-size: 1.6rem; }
+    .experience-row { flex-wrap: wrap; gap: 0.75rem; }
+    .exp-chip { flex: 1 1 auto; min-width: 120px; }
+    #experience { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-outline { justify-content: center; width: 100%; }
   }
 
   /* ── Intersection observer fades ── */
@@ -909,7 +915,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="mailto:gajjarkaushal66@gmail.com" class="nav-cta">Hire Me</a></li>
+    <!-- <li><a href="mailto:gajjarkaushal66@gmail.com" class="nav-cta">Hire Me</a></li> -->
   </ul>
   <div class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -925,10 +931,6 @@
 
     <!-- Left: text -->
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Available for Upwork projects
-      </div>
       <h1 class="hero-title">
         Kaushal Gajjar
         <span class="line2">Full Stack <span class="accent">Developer</span></span>
@@ -1142,6 +1144,9 @@
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon">🎯</div>
+         <a href="https://staging.eiffel.superfastech.com" target="_blank" class="project-live" style="text-decoration:none;">
+          <span class="project-live-dot"></span>Production Site
+        </a>
         <div class="project-live"><span class="project-live-dot"></span>Production</div>
       </div>
       <div class="project-name">Eiffel Events CRM</div>
@@ -1194,6 +1199,9 @@
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon">🍽️</div>
+         <a href="https://admin.fbk.superfastech.com" target="_blank" class="project-live" style="text-decoration:none;">
+          <span class="project-live-dot"></span>Live Site
+        </a>
       </div>
       <div class="project-name">FBK — F&B Management</div>
       <div class="project-desc">Multi-panel system for admin, 20+ technicians, and multiple kitchen outlets — job assignment, technician workflow and payment verification in real-time.</div>
